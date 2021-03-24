@@ -10,7 +10,7 @@
             font-style: normal;
             border-bottom: 1px dotted gray;
         }
-        h1 {
+        h1, .centrer {
             text-align: center;
         }
         h2, h3, h4 {
@@ -18,6 +18,18 @@
             color: white;
             margin: 5px;
             padding: 5px;
+        }
+
+        .contenu-flex {
+            margin-top: 50px;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .technologies {
+            background-color: #f5f5f5;
+            padding: 15px;
         }
     </style>
 
@@ -44,32 +56,50 @@
     </ol> -->
 
     <h1>Concordancier bilingue allemand-français</h1>
+    <p class="centrer"><small>Version alpha</small></p>
 
-    <!--for a more complex form, please consider the possibility of using the <legend> and <fieldset> tags-->
-    <form name="form-search-data" id="form-search-data" method="GET" action="/get-data-form">
-        <p><label>Recherche:</label></p>
-        <p><input type="text" name="searchQuery" required></p>
+    <div class="contenu-flex">
 
-        <p>Direction:</p>
-        <input type="radio" id="passage_autre" name="language" value="passage_autre" required checked>
-        <label for="passage_autre">... ===> FR</label><br>
-        <input type="radio" id="passage_fr" name="language" value="passage_fr">
-        <label for="passage_fr">FR ===> ...</label><br>
+        <!--for a more complex form, please consider the possibility of using the <legend> and <fieldset> tags-->
+        <form name="form-search-data" id="form-search-data" method="GET" action="/get-data-form">
+            <p><label>Recherche:</label></p>
+            <p><input type="text" name="searchQuery" required></p>
+    
+            <p>Direction:</p>
+            <input type="radio" id="passage_autre" name="language" value="passage_autre" required checked>
+            <label for="passage_autre">DE-FR</label><br>
+            <input type="radio" id="passage_fr" name="language" value="passage_fr">
+            <label for="passage_fr">FR-DE</label><br>
+    
+            <!-- <p>Other language:</p>
+            <input type="radio" id="en" name="corpus" value="en" required checked>
+            <label for="en">EN</label><br>
+            <input type="radio" id="it" name="corpus" value="it">
+            <label for="it">IT</label><br>
+    
+            <p>Query Type:</p>
+            <input type="radio" id="regexp" name="queryType" value="regexp" required>
+            <label for="regexp">regular expression</label><br>
+            <input type="radio" id="full-words" name="queryType" value="full-words" checked>
+            <label for="full-words">one full word</label><br> -->
+            
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    
+        <div class="technologies">
+            <p>Cette application est rendue possible grâce à...</p>
+    
+            <ul>
+                <li>NodeJS</li>
+                <li>Express</li>
+                <li>SQLite</li>
+                <li>EJS</li>
+                <li>Heroku</li>
+                <li>Tatoeba</li>
+            </ul>
+        </div>
 
-        <!-- <p>Other language:</p>
-        <input type="radio" id="en" name="corpus" value="en" required checked>
-        <label for="en">EN</label><br>
-        <input type="radio" id="it" name="corpus" value="it">
-        <label for="it">IT</label><br>
-
-        <p>Query Type:</p>
-        <input type="radio" id="regexp" name="queryType" value="regexp" required>
-        <label for="regexp">regular expression</label><br>
-        <input type="radio" id="full-words" name="queryType" value="full-words" checked>
-        <label for="full-words">one full word</label><br> -->
-        
-        <p><input type="submit" value="Submit"></p>
-    </form>
+    </div>
 
 </body>
 </html>
