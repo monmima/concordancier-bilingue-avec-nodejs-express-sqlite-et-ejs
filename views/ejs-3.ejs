@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrano Corpora</title>
+
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <%- include("header") %>
+
+    <h1>Results for the query "<%= queryTerm %>"</h1>
+
+    <div>
+        <% for (let i = 0; i < data.length; i++) { %>
+
+            <p><%= i %></p>
+
+            <div class="database">
+
+                <div class="language-column">
+                    <p><%= data[i].passage_autre %></p>
+
+                </div>
+
+                <div class="language-column">
+                    <p><%= data[i].passage_fr %></p>
+                </div>
+
+            </div>
+        <% } %>
+    </div>
+    
+    <%- include("footer") %>
+    <script src="js/random-message.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,53 @@
+
+figure {
+    border: 2px solid black;
+}
+footer, header {
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50px;
+    padding: 5px;
+}
+img {
+    max-height: 50px;
+    max-width: auto;
+}
+.database {
+
+    /* color: white; */
+    margin: 5px;
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/* each paragraph of text */
+.database > div {
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.language-column {
+    background-color: lightgray;
+    text-align: justify;
+    margin: 0  10px 0px 10px;
+}
+
+
+
+figure, .images {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
