@@ -43,6 +43,13 @@ app.set("view engine", "ejs");
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 /**
+ * EJS template 1
+ */
+ app.get('/', (req, res) => {
+    res.status(200).render("index");
+});
+
+/**
  * EJS template 3
  */
 app.get('/get-data-form', (req, res) => {
@@ -126,7 +133,7 @@ app.get('/get-data-form', (req, res) => {
                 data[i].passage_autre = newStrEn;
             }
 
-            res.status(200).render("ejs-3", {
+            res.status(200).render("page-resultats", {
                 data : data,
                 queryTerm: req.query.searchQuery
             });
