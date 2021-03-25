@@ -18,20 +18,23 @@
     <div>
         <% for (let i = 0; i < data.length; i++) { %>
 
-            <p><%= i %></p>
+            <div class="ligne-resultat-et-numero">
+                <p><%= i + 1 %></p>
 
-            <div class="database">
-
-                <div class="language-column">
-                    <p><%= data[i].passage_autre %></p>
-
+                <div class="database">
+    
+                    <div class="language-column">
+                        <p><%= data[i].passage_autre %></p>
+    
+                    </div>
+    
+                    <div class="language-column">
+                        <p><%= data[i].passage_fr %></p>
+                    </div>
+    
                 </div>
-
-                <div class="language-column">
-                    <p><%= data[i].passage_fr %></p>
-                </div>
-
             </div>
+
         <% } %>
     </div>
     
