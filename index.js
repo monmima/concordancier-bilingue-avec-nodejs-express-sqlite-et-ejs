@@ -133,7 +133,15 @@ app.get('/get-data-form', (req, res) => {
                 data[i].passage_autre = newStrEn;
             }
 
-            res.status(200).render("page-resultats", {
+            // query language on the left
+            let resultPage = "";
+            if (req.query.language === "passage_fr") {
+                resultPage = "page-resultats-fr-au";
+            } else {
+                resultPage = "page-resultats-au-fr";
+            }
+
+            res.status(200).render(resultPage, {
                 data : data,
                 queryTerm: req.query.searchQuery
             });
