@@ -17,6 +17,10 @@
 
     <h3><%= data.length %> <%= singOrPlural %> pour la requête «&nbsp;<%= queryTerm %>&nbsp;» en français</h3>
 
+    <p><%if (data.length > 1000) { %>
+        Attention! Seuls les 1000 premiers résultats sont affichés.
+    <% } %></p>
+
     <div>
 
         <% for (let i = 0; i < data.length && i < 1000; i++) { %>
