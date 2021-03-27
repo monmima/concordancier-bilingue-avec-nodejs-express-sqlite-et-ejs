@@ -24,17 +24,19 @@
 
                 <div class="database">
 
-                    <div class="language-column">
+                    <div class="language-column passage_fr">
                         <p><%= data[i].passage_fr %></p>
                         <div>
-                            <button onclick="responsiveVoice.speak('<%= data[i].passage_fr %>', 'French Male')">🔊</button>
+                            <!-- <button onclick="responsiveVoice.speak('<%= data[i].passage_fr %>', 'French Male')">🔊</button> -->
+                            <button>🔊</button>
                         </div>
                     </div>
 
-                    <div class="language-column" id="<%= i %>">
+                    <div class="language-column passage_autre">
                         <p><%= data[i].passage_autre %></p>
                         <div>
-                            <button onclick="responsiveVoice.speak('<%= data[i].passage_autre %>', 'Deutsch Male')">🔊</button>
+                            <!-- <button onclick="responsiveVoice.speak('<%= data[i].passage_autre %>', 'Deutsch Male')">🔊</button> -->
+                            <button>🔊</button>
                         </div>
                     </div>
     
@@ -45,8 +47,13 @@
     </div>
     
     <%- include("footer") %>
-    <script src="js/random-message.js"></script>
+
     <script src="js/responsivevoice.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        
+    </script>
 
 </body>
 </html>
