@@ -13,11 +13,11 @@
 <body>
     <%- include("header") %>
 
-    <h1>Résultats de la reqûete «&nbsp;<%= queryTerm %>&nbsp;» en allemand</h1>
+    <h3><%= data.length %> résultats pour la requête «&nbsp;<%= queryTerm %>&nbsp;» en allemand</h3>
 
     <div>
 
-        <% for (let i = 0; i < data.length; i++) { %>
+        <% for (let i = 0; i < data.length && i < 1000; i++) { %>
 
             <div class="ligne-resultat-et-numero">
                 <p><%= i + 1 %></p>
