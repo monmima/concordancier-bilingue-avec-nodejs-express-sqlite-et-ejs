@@ -13,7 +13,9 @@
 <body>
     <%- include("header") %>
 
-    <h3><%= data.length %> résultats pour la requête «&nbsp;<%= queryTerm %>&nbsp;» en allemand</h3>
+    <% const singOrPlural = data.length === 1 || data.length === 0 ? "résultat" : "résultats" %>
+
+    <h3><%= data.length %> <%= singOrPlural %> pour la requête «&nbsp;<%= queryTerm %>&nbsp;» en allemand</h3>
 
     <div>
 
@@ -27,7 +29,6 @@
                     <div class="language-column passage_autre">
                         <p><%= data[i].passage_autre %></p>
                         <div>
-                            <!-- <button onclick="responsiveVoice.speak('<%= data[i].passage_autre %>', 'Deutsch Male')">🔊</button> -->
                             <button>🔊</button>
                         </div>
                     </div>
@@ -35,7 +36,6 @@
                     <div class="language-column passage_fr">
                         <p><%= data[i].passage_fr %></p>
                         <div>
-                            <!-- <button onclick="responsiveVoice.speak('<%= data[i].passage_fr %>', 'French Male')">🔊</button> -->
                             <button>🔊</button>
                         </div>
                     </div>
