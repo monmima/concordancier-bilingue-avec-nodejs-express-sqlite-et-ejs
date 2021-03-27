@@ -9,8 +9,8 @@ console.log("This message demonstrates that JavaScript was served by the server!
 function turnPlaceholdersToStrongTags() {
     let text = document.querySelector("body").innerHTML;
 
-    text = text.replace(/zzzz-openstrongtag-zzzz/g, "<strong>");
-    text = text.replace(/zzzz-closestrongtag-zzzz/g, "</strong>");
+    text = text.replace(/&lt;strong&gt;/g, "<strong>");
+    text = text.replace(/&lt;\/strong&gt;/g, "</strong>");
     
     // console.log(text);
     

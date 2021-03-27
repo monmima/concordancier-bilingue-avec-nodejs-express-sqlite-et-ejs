@@ -16,6 +16,7 @@
     <h1>Résultats de la reqûete pour le français «&nbsp;<%= queryTerm %>&nbsp;»</h1>
 
     <div>
+
         <% for (let i = 0; i < data.length; i++) { %>
 
             <div class="ligne-resultat-et-numero">
@@ -25,10 +26,16 @@
 
                     <div class="language-column">
                         <p><%= data[i].passage_fr %></p>
+                        <div>
+                            <button onclick="responsiveVoice.speak('<%= data[i].passage_fr %>', 'French Male')">🔊</button>
+                        </div>
                     </div>
 
-                    <div class="language-column">
+                    <div class="language-column" id="<%= i %>">
                         <p><%= data[i].passage_autre %></p>
+                        <div>
+                            <button onclick="responsiveVoice.speak('<%= data[i].passage_autre %>', 'Deutsch Male')">🔊</button>
+                        </div>
                     </div>
     
                 </div>
@@ -39,6 +46,8 @@
     
     <%- include("footer") %>
     <script src="js/random-message.js"></script>
+    <script src="js/responsivevoice.js"></script>
+
 </body>
 </html>
 

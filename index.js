@@ -126,8 +126,8 @@ app.get('/get-data-form', (req, res) => {
 
             for (let i = 0; i < data.length; i++) {
                 const re = new RegExp(req.query.searchQuery, "gi");
-                let newStrFr = data[i].passage_fr.replace(re, `zzzz-openstrongtag-zzzz${req.query.searchQuery.toUpperCase()}zzzz-closestrongtag-zzzz`);
-                let newStrEn = data[i].passage_autre.replace(re, `zzzz-openstrongtag-zzzz${req.query.searchQuery.toUpperCase()}zzzz-closestrongtag-zzzz`);
+                let newStrFr = data[i].passage_fr.replace(re, `<strong>${req.query.searchQuery.toUpperCase()}</strong>`);
+                let newStrEn = data[i].passage_autre.replace(re, `<strong>${req.query.searchQuery.toUpperCase()}</strong>`);
 
                 data[i].passage_fr = newStrFr;
                 data[i].passage_autre = newStrEn;
