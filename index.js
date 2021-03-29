@@ -165,7 +165,7 @@ app.use(function (req, res, next) {
  * handling connections to the server
  */
 app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
+    console.log(`Server started at http://localhost:${PORT}`);
 });
 
 /**
