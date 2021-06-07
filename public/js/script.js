@@ -36,12 +36,12 @@ function addEvents() {
             console.log(textToRead);
     
             if (parentDivLanguageColumn === "passage_autre") {
-                responsiveVoice.speak(textToRead, 'Deutsch Male')
+                responsiveVoice.speak(textToRead, 'Deutsch Female')
                 // console.log("de");
             }
             
             if (parentDivLanguageColumn === "passage_fr") {
-                responsiveVoice.speak(textToRead, 'French Male')
+                responsiveVoice.speak(textToRead, 'French Female')
                 // console.log("fr");
             }
         });
